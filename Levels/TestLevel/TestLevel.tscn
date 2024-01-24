@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d351wdiahs5d5"]
+
+[ext_resource type="MeshLibrary" uid="uid://c4k0efdssmygs" path="res://ArtAssets/MeshLibraries/Terrain_MeshLibrary.tres" id="1_0lbgj"]
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_0lbgj")
