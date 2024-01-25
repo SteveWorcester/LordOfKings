@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://dobkf3n4srnef"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_h4gj5"]
+[ext_resource type="Script" path="res://Player/StateMachine.gd" id="2_jbwsf"]
+[ext_resource type="Script" path="res://Player/State_Init.gd" id="3_nk73h"]
+[ext_resource type="Script" path="res://Player/State_Active.gd" id="4_bswpd"]
+[ext_resource type="Script" path="res://Player/State_Waiting.gd" id="5_3a3jl"]
+[ext_resource type="Script" path="res://Player/State_SeasonChange.gd" id="6_0yg7b"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_h4gj5")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_jbwsf")
+
+[node name="State_Init" type="Node" parent="StateMachine"]
+script = ExtResource("3_nk73h")
+
+[node name="State_Active" type="Node" parent="StateMachine"]
+script = ExtResource("4_bswpd")
+
+[node name="State_Waiting" type="Node" parent="StateMachine"]
+script = ExtResource("5_3a3jl")
+
+[node name="State_SeasonChange" type="Node" parent="StateMachine"]
+script = ExtResource("6_0yg7b")
