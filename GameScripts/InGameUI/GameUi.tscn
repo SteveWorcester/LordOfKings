@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdypffxwp781w"]
+
+[ext_resource type="Texture2D" uid="uid://b0yuklwrpr00m" path="res://ArtAssets/Kenney/UI/panel-transparent-center-026.png" id="1_je1pd"]
+[ext_resource type="Theme" uid="uid://gs8fkd7hx2ow" path="res://ArtAssets/Themes/GameUi.tres" id="1_yejgy"]
+[ext_resource type="Script" path="res://GameScripts/InGameUI/GameUi.gd" id="2_vt0s0"]
+[ext_resource type="PackedScene" uid="uid://olabrfmsurw8" path="res://GameScripts/InGameUI/UI_TopBar_Happiness.tscn" id="4_tpvau"]
+[ext_resource type="PackedScene" uid="uid://cn5doqbn5d65e" path="res://GameScripts/InGameUI/UI_TopBar_Gold.tscn" id="5_fx3ds"]
+
+[node name="GameUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_yejgy")
+script = ExtResource("2_vt0s0")
+metadata/_edit_use_anchors_ = true
+
+[node name="TopBar" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 84.0
+grow_horizontal = 2
+texture = ExtResource("1_je1pd")
+patch_margin_left = 42
+patch_margin_top = 42
+patch_margin_right = 42
+patch_margin_bottom = 42
+
+[node name="Labels" type="HBoxContainer" parent="TopBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Happiness" parent="TopBar/Labels" instance=ExtResource("4_tpvau")]
+layout_mode = 2
+
+[node name="Gold" parent="TopBar/Labels" instance=ExtResource("5_fx3ds")]
+layout_mode = 2

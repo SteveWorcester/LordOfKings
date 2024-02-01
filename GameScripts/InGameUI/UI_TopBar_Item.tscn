@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlggsn3u3irwm"]
+
+[ext_resource type="Texture2D" uid="uid://cywjwkbfvxw8u" path="res://ArtAssets/Temp/Heart.png" id="1_1ycmh"]
+
+[node name="Happiness" type="HBoxContainer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_1ycmh")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "85"
+vertical_alignment = 1
