@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxeivgksx1th2"]
+
+[ext_resource type="Script" path="res://GameScripts/Camera/CameraController.gd" id="1_0p3rm"]
+
+[node name="CameraController" type="Node3D"]
+script = ExtResource("1_0p3rm")
+
+[node name="PlayCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.488743, 0.872428, 0, -0.872428, 0.488743, 19.1629, 8.42182, 11.0569)
+fov = 74.8703

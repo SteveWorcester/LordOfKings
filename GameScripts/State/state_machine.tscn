@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6qrodkpgsio4"]
+
+[ext_resource type="Script" path="res://GameScripts/State/StateMachine.gd" id="1_fknvu"]
+[ext_resource type="Script" path="res://GameScripts/State/State_Init.gd" id="2_ms4ch"]
+[ext_resource type="Script" path="res://GameScripts/State/State_Active.gd" id="3_062hg"]
+[ext_resource type="Script" path="res://GameScripts/State/State_Waiting.gd" id="4_33gbo"]
+[ext_resource type="Script" path="res://GameScripts/State/State_SeasonChange.gd" id="5_c30qv"]
+
+[node name="StateMachine" type="Node"]
+script = ExtResource("1_fknvu")
+
+[node name="State_Init" type="Node" parent="."]
+script = ExtResource("2_ms4ch")
+
+[node name="State_Active" type="Node" parent="."]
+script = ExtResource("3_062hg")
+
+[node name="State_Waiting" type="Node" parent="."]
+script = ExtResource("4_33gbo")
+
+[node name="State_SeasonChange" type="Node" parent="."]
+script = ExtResource("5_c30qv")

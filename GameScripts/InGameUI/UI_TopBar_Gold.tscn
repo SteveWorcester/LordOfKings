@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn5doqbn5d65e"]
+
+[ext_resource type="Texture2D" uid="uid://wgwjpga7ckot" path="res://ArtAssets/Temp/Gold.png" id="1_7iaep"]
+
+[node name="Gold" type="HBoxContainer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_7iaep")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "2,800"
+vertical_alignment = 1
