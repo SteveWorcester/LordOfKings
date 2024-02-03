@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://djimk2ymyt7ix"]
+[gd_scene load_steps=4 format=3 uid="uid://djimk2ymyt7ix"]
 
 [ext_resource type="Script" path="res://Main/Main.gd" id="1_exy7j"]
 [ext_resource type="Script" path="res://Main/LevelManager.gd" id="2_lag84"]
+[ext_resource type="PackedScene" uid="uid://cdypffxwp781w" path="res://GameScripts/InGameUI/GameUi.tscn" id="3_1t34r"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_exy7j")
@@ -37,5 +38,8 @@ text = "Start Game"
 
 [node name="LevelManager" type="Node3D" parent="."]
 script = ExtResource("2_lag84")
+
+[node name="GameUi" parent="." instance=ExtResource("3_1t34r")]
+visible = false
 
 [connection signal="button_up" from="MainUi/StartGame" to="." method="on_start_game_button_pressed"]
