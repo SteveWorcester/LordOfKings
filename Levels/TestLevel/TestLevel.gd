@@ -8,10 +8,10 @@ enum Season {
 	}
 
 @onready var sunPosition : Dictionary = {
-	Season.Spring: $Terrain/Light_Spring,
-	Season.Summer:$Terrain/Light_Summer,
-	Season.Autumn:$Terrain/Light_Autumn,
-	Season.Winter:$Terrain/Light_Winter
+	Season.Spring: $Environment/Light_Spring,
+	Season.Summer: $Environment/Light_Summer,
+	Season.Autumn: $Environment/Light_Autumn,
+	Season.Winter: $Environment/Light_Winter
 }
 
 var current_season : Season
@@ -33,4 +33,4 @@ func update_turn():
 	sunPosition[current_season].visible = false
 	sunPosition[new_season].visible = true
 	
-	current_season = new_season
+	current_season = new_season as Season
